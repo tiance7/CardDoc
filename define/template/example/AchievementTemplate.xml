@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AchievementTemplate skeleton="Map" key="nAchievementId">
+    <field field="nAchievementId"   type="uint"     comment="成就id"/>
+    <field field="nType"            type="uint"     comment="成就类型 enum ACHIEVEMENT_TYPE"/> 
+    <field field="nObject"          type="uint"     comment="成就主体 enum ACHIEVEMENT_OBJECT"/>
+    <field field="nScore"           type="uint"     comment="成就分值"/>  
+    <field field="nIsCore"          type="uint"     comment="是否是核心成就" isclient="1"/> 
+    <field field="szName"           type="string"   comment="成就名称" size="32"/> 
+    <field field="szIcoin"          type="string"   comment="成就icon" size="32" isclient="1"/> 
+    <field field="szCheckDesc"      type="string"   comment="检查点描述" size="128" isclient="1"/> 
+    <field field="nCheckType"       type="uint"     comment="检查点类型 enum CHECK_TYPE"/> 
+    <field field="nCheckId"         type="uint"     comment="检查点id"/> 
+    <field field="nCheckCount"      type="uint"     comment="检查点数量"/> 
+    <field field="nQuestId"         type="uint"     comment="对应的任务id"/> 
+    <field field="nBltId"           type="uint"     comment="对应的公告id"/>
+    <field field="nHonorId"         type="uint"     comment="完成成就获得的勋章ID"/>
+</AchievementTemplate>

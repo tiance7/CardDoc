@@ -1,0 +1,180 @@
+message CHAR_BASIC {
+    required UINT32 char_oid = 1 [primary = true];    ///< 角色OID
+    required UINT32 account_oid = 2;    ///< 角色所在帐号ID
+    required int char_order = 3;    ///< 角色位号
+    required int gm_authority = 4;    ///< Gm权限
+    required fixstr64 name = 5;    ///< 角色名称
+    required int race_id = 6;    ///< 职业OID
+    required int sex_id = 7;    ///< 角色性别
+    required int camp_id = 8;    ///< 所属阵营
+    required int title_id = 9;    ///< 当前称号
+    //required int packages = 10;    ///< 包裹格数
+    required int unused_padding0 = 10;    ///< 占位符
+    required int warehouses = 11;    ///< 仓库格数
+    required int province_id = 12;    ///< 省份id
+    required int city_id = 13;    ///< 城市id
+    required int spouse_id = 14;    ///< 配偶id
+    required int guild_id = 15;    ///< 所属帮派ID
+    required int guild_title_id = 16;    ///< 帮派称号ID
+    required int level = 17;    ///< 职业修为
+    required UINT32 cur_exp = 18;    ///< 当前总经验
+    required int cur_sin = 19;    ///< 红名值
+    required int cur_hp = 20;    ///< 当前生命值
+    required int cur_mp = 21;    ///< 当前能量值
+    required int cur_sp = 22;    ///< 当前怒值
+    required int svr_line_id = 23;    ///< 所在分线ID
+    required int map_id = 24;    ///< 所在地图
+    required float pos_x = 25;    ///< 坐标x值
+    required float pos_y = 26;    ///< 坐标y值
+    required float pos_z = 27;    ///< 坐标z值
+    required float direction = 28;    ///< 朝向角度
+    required int body_mode = 29;    ///< 身体形态
+    required UINT32 create_time = 30;    ///< 创建时间
+    required UINT32 last_login_time = 31;    ///< 最后登陆时间
+    required int clan_cont = 32;    ///< 家族贡献点
+    required int guild_cont = 33;    ///< 帮派贡献点
+    required int camp_cont = 34;    ///< 阵营贡献点
+    required int glory = 35;    ///< 荣誉值
+    required fixstr36 clan_name = 36;    ///< 家族名称
+    required fixstr36 guild_name = 37;    ///< 宗派名称
+	required int		immortal = 38;			///< 仙位
+	required int 		school = 39;			///< 师门(门派)
+	required int		schoolContribute = 40;	///< 师门贡献
+	required int		collectivityHome = 41; 	///< 集体洞府
+	required int		collectivityHomeContribute = 42; 	///< 集体洞府贡献
+	required int		transmigration = 43;	///< 轮回
+	required fixstr64	nickName = 44;			///< 名号
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+/**
+ * Struct Name : char_extra
+ * @brief    : 角色扩展信息
+ * @remark : .\instance\char_extra.xml
+ */
+message CHAR_EXTRA {
+    required UINT32 chat_channel = 1;    ///< 聊天频道禁用情况
+    required int pk_mode = 2;    ///< PK模式
+    required int pk_flag = 3;    ///< PK标志
+    required UINT32 pk_flag_time = 4;    ///< PK标志剩余时间
+    required int pk_state = 5;    ///< PK状态
+    required UINT32 pk_state_time = 6;    ///< PK状态剩余时间
+    required UINT32 pk_mark_time = 7;    ///< 减少孽债剩余时间
+    required int sale_count = 8;    ///< 寄售物品个数
+    required UINT32 emotion_bit1 = 9;    ///< 表情BIT第1个32位
+    required UINT32 emotion_bit2 = 10;    ///< 表情BIT第2个32位
+    required UINT32 last_master_time = 11;    ///< 上次师徒解除时间
+    required UINT32 last_spouse_time = 12;    ///< 上次夫妻解除时间
+    required UINT32 last_guild_time = 13;    ///< 上次退出宗派时间
+    required UINT32 last_logout_time = 14;    ///< 上次退出角色时间
+    required UINT32 last_dq_accept_time = 15;    ///< 上次日常任务接受时间
+    required UINT32 last_dq_complete_time = 16;    ///< 上次日常任务完成时间
+    required int dq_times = 17;    ///< 日常任务连续完成计数
+    required UINT32 last_fly_time = 18;    ///< 上次飞行时间
+    required int today_fly_times = 19;    ///< 本日已自由飞行次数
+    required int chat_room_max = 20;    ///< 单聊天房间最多参与者
+    required UINT32 bankroll = 21;    ///< 跑商资金
+    required UINT32 last_bankroll_time = 22;    ///< 上次跑商资金领取时间
+    required int glory_hide = 23;    ///< 隐藏荣誉值
+    required int glory_expend = 24;    ///< 可消费荣誉值
+    required int transport_id = 25;    ///< 当前传送
+    required UINT32 death_time = 26;    ///< 死亡时间
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+/**
+  * Struct Name : char_facade
+    * @brief    : 
+      * @remark : .\instance\char_facade.xml
+        */
+message CHAR_FACADE {
+    required UINT32 hair_style = 1;    ///< 角色头发编号
+    required UINT32 hair_color = 2;    ///< 角色头发颜色
+    required UINT32 face_style = 3;    ///< 角色脸型编号
+    required UINT64 slot_weapon = 4;    ///< 角色装备武器实例id
+    required UINT64 slot_head = 5;    ///< 角色装备头盔实例oid
+    required UINT64 slot_neck = 6;    ///< 角色装备项链实例oid
+    required UINT64 slot_back = 7;    ///< 角色装备披风实例oid
+    required UINT64 slot_shoulder = 8;    ///< 角色装备肩膀实例oid
+    required UINT64 slot_body = 9;    ///< 角色装备衣服实例oid
+    required UINT64 slot_hand = 10;    ///< 角色装备手套实例oid
+    required UINT64 slot_waist = 11;    ///< 角色装备腰带实例oid
+    required UINT64 slot_bag = 12;    ///< 角色装备香囊实例oid
+    required UINT64 slot_leg = 13;    ///< 角色装备裤子实例oid
+    required UINT64 slot_foot = 14;    ///< 角色装备鞋子实例oid
+    required UINT64 slot_ring1 = 15;    ///< 角色装备戒指1实例oid
+    required UINT64 slot_ring2 = 16;    ///< 角色装备戒指2实例oid
+    required UINT64 slot_trinket1 = 17;    ///< 角色装备饰品1实例oid
+    required UINT64 slot_trinket2 = 18;    ///< 角色装备饰品2实例oid
+    required UINT64 slot_jewel1 = 19;    ///< 角色装备法宝1实例oid
+    required UINT64 slot_jewel2 = 20;    ///< 角色装备法宝2实例oid
+    required UINT64 slot_jewel3 = 21;    ///< 角色装备法宝3实例oid
+    required UINT64 slot_pet = 22;    ///< 角色装备骑宠实例oid
+    required UINT64 slot_fashion = 23;    ///< 角色装备时装实例oid
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+/**
+  * Struct Name : char_detail
+    * @brief    : 角色详细(属性)信息
+      * @remark : .\instance\char_detail.xml
+        */
+message CHAR_DETAIL {
+    required int max_hp = 1;    ///< 总生命值上限
+    required int max_mp = 2;    ///< 总能量值上限
+    required int hp_reg = 3;    ///< 总生命回复速度
+    required int mp_reg = 4;    ///< 总能量回复速度
+    required int sp_reg = 5;    ///< 总怒值恢复速度
+    required int min_p_atk = 6;    ///< 总最小物理攻击力
+    required int max_p_atk = 7;    ///< 总最大物理攻击力
+    required int min_m_atk = 8;    ///< 总最小法术攻击力
+    required int max_m_atk = 9;    ///< 总最大法术攻击力
+    required int p_def = 10;    ///< 总物理防御
+    required int m_def = 11;    ///< 总法术防御
+    required float atk_speed = 12;    ///< 最终攻击速度
+    required float p_hit_rate = 13;    ///< 总物理命中率
+    required float m_hit_rate = 14;    ///< 总法术命中率
+    required float p_dodge_rate = 15;    ///< 总物理闪躲率
+    required float m_dodge_rate = 16;    ///< 总法术闪躲率
+    required float p_knock_rate = 17;    ///< 总物理暴击率
+    required float m_knock_rate = 18;    ///< 总法术暴击率
+    required int hp_level = 19;    ///< 总生命等级
+    required int mp_level = 20;    ///< 总能量等级
+    required int p_atk_level = 21;    ///< 总物理攻击等级
+    required int m_atk_level = 22;    ///< 总法术攻击等级
+    required int p_hit_level = 23;    ///< 总物理命中等级
+    required int m_hit_level = 24;    ///< 总法术命中等级
+    required int p_dodge_level = 25;    ///< 总物理闪躲等级
+    required int m_dodge_level = 26;    ///< 总法术闪躲等级
+    required int p_knock_level = 27;    ///< 总物理暴击等级
+    required int m_knock_level = 28;    ///< 总法术暴击等级
+    required int atk_speed_level = 29;    ///< 总攻击速度等级
+    required int fight = 30;    ///< 总战斗力
+    required UINT32 non_immune_type = 31;    ///< 最终非免疫类型
+    required int move_speed = 32;    ///< 最终移动速度
+    required int dead_drop_rate = 33;    ///< 死亡掉落自身物品率
+}
+
+message CHAR_DATA {
+    option db_store = true;
+    option db_table = "char_data";
+    option db_obj_type = ZOT_CHAR_DATA;
+    required CHAR_BASIC char_basic = 1;    ///< 角色基本信息
+    required CHAR_EXTRA char_extra = 2;    ///< 角色扩展信息
+    required CHAR_FACADE char_facade = 3;    ///< 角色外观信息
+    required CHAR_DETAIL char_detail = 4;    ///< 角色属性信息
+}
+
+message CHAR_SPELL {
+    option db_store = true;
+    option db_table = "char_spells";
+    option db_obj_type = ZOT_CHAR_SPELL;
+    required UINT32 char_oid = 1; 
+    required UINT32 spell_oid = 2;
+    required UINT32 spell_level = 3;
+    required BOOL   spell_avaiable = 4;
+    required CHAR_BASIC char_basic = 5;
+}

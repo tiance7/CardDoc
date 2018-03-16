@@ -1,0 +1,41 @@
+enum 
+{
+    OBJ_ABC = 1;
+}
+
+message CharItem
+{
+    option db_store = true;
+    option db_table = "char_item";
+    option db_obj_type = OBJ_ABC;
+    required UINT64 instance_oid = 1;
+    required UINT32 template_oid = 2;
+    required UINT32 owner_oid = 3 [index=char_loc];
+    required UINT32 refiner_oid = 4;
+    required UINT32 show_id = 5;
+    required UINT32 magic_formula = 6;
+    required UINT32 embeded_jewel1 = 7;
+    required UINT32 embeded_jewel2 = 8;
+    required UINT32 embeded_jewel3 = 9;
+    required UINT32 embeded_jewel4 = 10;
+    required UINT32 map_id = 11;
+    required UINT32 cool_remain_time= 12;
+    required UINT32 life_left = 13;
+    required BYTE timing_type = 14;
+    required UINT32 ext_flag = 15;
+    required UINT32 cur_fray = 16;
+    required INT32 stack_count = 17;
+    required INT32 times_left = 18;
+    required INT32 holes = 19;
+    required INT32 price = 20 ;
+    required BYTE store_loc = 21 [index=char_loc];
+    required BYTE equip_slotno = 22 [index=char_loc];
+    required BYTE coin_type = 23;
+    required BYTE is_judged = 24;
+    required float pos_x = 25;
+    required float pos_y = 26;
+    required float pos_z = 27;
+    required UINT32 create_time = 28;
+    required INT64 last_use = 29;
+    required fixstr37 item_uuid = 30 [primary=true];
+}

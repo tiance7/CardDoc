@@ -1,0 +1,44 @@
+
+import a; /// this is an comment
+
+
+/// comment for GlobalEnum
+enum GlobalEnum
+{
+        /// comment for G1
+        G1 = 1;
+        G2 = G1 + 1; ///< comment for G2
+}
+
+
+/// comment for class A
+message A {
+        ///< comment for unnamed enum
+        enum { THIS_MSG_TYPE = MSG_ABC; }
+        /// comment for embed Enum
+        enum EMBED_ENUM { 
+             E1 = 1; 
+             // comment in Enum
+             E2 = 2; 
+             E3 = 3; ///< comment for E3
+            E4 = E1 | E2;
+            E5 = (E1 | E2 | E3);
+       } 
+        required int b = 1; ///< comment for field b
+        repeated int c = 2;
+}
+
+message C
+{
+        required int v = 1;
+}
+
+/*
+  comment for B
+ */
+message B 
+{
+        required string name = 1;
+        repeated int64  items = 2;
+        required C ref = 3;
+}

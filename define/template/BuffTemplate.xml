@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<BuffTemplate skeleton="Map" key="nId">
+    <field field="nId"   type="uint"     comment="id"/>
+    <field field="nType"           type="uint"   comment="enum BuffType"/> 
+    <field field="nTrigger"           type="uint"   comment="enum BuffTriggerType"/> 
+    <field field="iEffectA"           type="int"   comment="效果值A"/> 
+    <field field="iBout"           type="int"   comment="持续回合"/> 
+    <field field="szImg"           type="string"   comment="图片名" size="32"/> 
+</BuffTemplate>
