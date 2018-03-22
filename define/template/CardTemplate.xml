@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <CardTemplate skeleton="Map" key="nId">
-    <field field="nId"   						type="uint"     comment="id"/>
-    <field field="nJob"   					type="uint"     comment="职业"/>
+    <field field="nId"              type="uint"     comment="id"/>
+    <field field="nJob"             type="uint"     comment="职业"/>
     <field field="szName"           type="string"   comment="名字" size="32"/> 
-    <field field="iCost"           	type="int"   		comment="费用"/> 
+    <field field="iCost"            type="int"      comment="费用"/> 
     <field field="szDesc"           type="string"   comment="描述" size="32"/> 
-    <field field="nType"           	type="uint"   	comment="卡牌类型 enum of CardType"/> 
-    <field field="nCardUseType"    	type="uint"   	comment="卡牌使用条件 enum of CardUseType"/> 
-    <field field="nUseTypeParam"   	type="uint"   	comment="卡牌使用条件参数"/> 
-    <field field="nEffectId"        type="uint"   	comment="效果ID"/> 
+    <field field="nType"            type="uint"     comment="卡牌类型 enum CardType"/> 
+    <field field="nTargetType"      type="uint"     comment="卡牌目标类型 enum CardTargetType"/> 
+    <field field="nCardUseType"     type="uint"     comment="卡牌使用条件 enum CardUseType"/> 
+    <field field="nUseTypeParam"    type="uint"     comment="卡牌使用条件参数"/> 
+    <field field="nEffectId"        type="uint"     comment="效果ID"/> 
     <field field="nUpgradeId"       type="uint"     comment="升级后ID"/> 
 </CardTemplate>

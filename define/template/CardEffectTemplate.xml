@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <CardEffectTemplate skeleton="Map" key="nId">
-    <field field="nId"   							type="uint"     comment="id"/>
-    <field field="iEffectTrigType"    type="uint"     comment="效果触发类型 enum of CardEffectTrigType"/> 
-    <field field="nTarget"         		type="uint"   	comment="目标类型 enum of CardEffectTargetType"/> 
-    <field field="nType"           		type="uint"   	comment="效果类型 enum of CardEffectType"/> 
-    <field field="iEffectValue"       type="int"   		comment="效果值"/> 
-    <field field="nLinkId"           	type="uint"   	comment="关联效果ID"/> 
+    <field field="nId"                type="uint"     comment="id"/>
+    <field field="iEffectTrigType"    type="uint"     comment="效果触发类型 enum CardEffectTrigType"/> 
+    <field field="nTarget"            type="uint"     comment="目标类型 enum CardEffectTargetType"/> 
+    <field field="nType"              type="uint"     comment="效果类型 enum CardEffectType"/> 
+    <field field="iEffectValue"       type="int"      comment="效果值"/> 
+    <field field="nLinkId"            type="uint"   comment="关联效果ID"/> 
 </CardEffectTemplate>
