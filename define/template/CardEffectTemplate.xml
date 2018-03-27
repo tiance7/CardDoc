@@ -7,5 +7,6 @@
     <field field="iEffectValue"       type="int"      comment="效果值"/> 
     <field field="iEffectCount"       type="int"      comment="效果触发次数"/> 
     <field field="iCostEffectTimes"   type="int"      comment="费用效果倍数"/> 
+    <field field="iEffectValue_2"     type="int"      comment="2级效果值"/>
     <field field="nLinkId"            type="uint"     comment="关联效果ID"/> 
 </CardEffectTemplate>
