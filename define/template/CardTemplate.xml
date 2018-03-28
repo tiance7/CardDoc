@@ -11,4 +11,6 @@
     <field field="nUseTypeParam"    type="uint"     comment="卡牌使用条件参数"/> 
     <field field="nEffectId"        type="uint"     comment="效果ID"/> 
     <field field="nUpgradeId"       type="uint"     comment="升级后ID"/> 
+    <field field="bExhaust"         type="bool"     comment="消耗"/> 
+    <field field="bEthereal"        type="bool"     comment="虚无"/>
 </CardTemplate>
