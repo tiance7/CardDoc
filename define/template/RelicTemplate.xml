@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RelicTemplate skeleton="Map" key="nId">
+    <field field="nId"                  type="uint"     comment="法宝ID"/>
+    <field field="nType"                type="uint"     comment="法宝类型"/>
+    <field field="szName"               type="string"   comment="名字"/>
+    <field field="szDesc"               type="string"   comment="描述"/>
+    <field field="szImg"                type="string"   comment="图片名" size="32"/> 
+</RelicTemplate>
